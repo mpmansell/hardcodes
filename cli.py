@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, re
+import os
+import re
 import argparse
 from hardcodes import search
 
@@ -11,7 +12,7 @@ parser.add_argument('-r', '--recursive', help='use post method', dest='recursive
 parser.add_argument('-c', '--comments', help='specify how to handles comments.\n\t\'ignore\'- ignore them\n\'parse\'- parse them like code\n\'string\'-return comments as hardcoded strings', dest='comments', default='parse')
 parser.add_argument('-l', '--language', help='specify programming language of source code', dest='lang', default='common')
 parser.add_argument('-n', '--line-numbers', help='include source code line numbers in output', action='store_true')
-parser.add_argument('-q', "--query", help='extract only strings matchng the regex', dest='query_match', default='')
+parser.add_argument('-q', "--query", help='extract only strings matching the regex', dest='query_match', default='')
 parser.add_argument('-o', help='don\'t show location of found strings', dest='hide_path', action='store_true')
 parser.add_argument('file', help='file', type=str)
 args = parser.parse_args()
